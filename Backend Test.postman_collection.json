@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "5dcc1469-b327-4074-9f27-8909105cd9fd",
+		"name": "Backend Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Find Ideal Enemy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"protocols\":[\"avoid-mech\"],\"scan\":[{\"coordinates\":{\"x\":0,\"y\":40},\"enemies\":{\"type\":\"soldier\",\"number\":10}},{\"coordinates\":{\"x\":0,\"y\":80},\"allies\":5,\"enemies\":{\"type\":\"mech\",\"number\":1}}]}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_SERVER}}/radar",
+					"host": [
+						"{{API_SERVER}}"
+					],
+					"path": [
+						"radar"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "OK",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"protocols\":[\"avoid-mech\"],\"scan\":[{\"coordinates\":{\"x\":0,\"y\":40},\"enemies\":{\"type\":\"soldier\",\"number\":10}},{\"coordinates\":{\"x\":0,\"y\":80},\"allies\":5,\"enemies\":{\"type\":\"mech\",\"number\":1}}]}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_SERVER}}/radar",
+							"host": [
+								"{{API_SERVER}}"
+							],
+							"path": [
+								"radar"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "14"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"e-XCP0xprljjG0pRiS/iTngf+bJY0\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 26 Jun 2022 01:04:30 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"x\": 0,\n    \"y\": 40\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "API_SERVER",
+			"value": ""
+		}
+	]
+}
